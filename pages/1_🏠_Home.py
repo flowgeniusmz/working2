@@ -1,5 +1,9 @@
 import streamlit as st
-from config import pagesetup as ps
+from classes.class0_pagesetup import PageSetup
 
-page_number = 0
-ps.master_page_display_styled_popmenu_pop(varPageNumber=page_number)
+# 1. Set ST PAGE CONFIG
+st.set_page_config(page_icon=st.secrets.app.icon, page_title=st.secrets.app.title, layout=st.secrets.app.layout, initial_sidebar_state=st.secrets.app.sidebar)
+
+# 2. Set Page Setup
+pagenumber = 0
+PageSetup(pagenumber=pagenumber).display_auto()

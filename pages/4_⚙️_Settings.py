@@ -5,5 +5,5 @@ from classes.class0_pagesetup import PageSetup
 st.set_page_config(page_icon=st.secrets.app.icon, page_title=st.secrets.app.title, layout=st.secrets.app.layout, initial_sidebar_state=st.secrets.app.sidebar)
 
 # 2. Set Page Setup
-pagenumber = 0
-PageSetup(pagenumber=pagenumber).display_manual()
+pagenumber = 3
+PageSetup(pagenumber=pagenumber).display_auto()
