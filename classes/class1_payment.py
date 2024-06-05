@@ -10,8 +10,8 @@ class Payment:
         self.runmode = st.secrets.stripe.runmode
         self.mode = st.secrets.stripe.mode
         self.uimode = st.secrets.stripe.uimode
-        self.client_reference_id = "adfadf"
-        self.customer_email = "mzozulia@flowgneius.com"
+        self.client_reference_id = "testclientrefid"
+        self.customer_email = "mtest@test.com"
         if self.runmode == "test":
             self._initialize_attributes_test()
         elif self.runmode == "live":
@@ -38,7 +38,7 @@ class Payment:
         self.qrcode_path = st.secrets.stripe.qrcode
 
     def display_payment(self):
-        container = st.container(border=False)
+        container = st.container(border=False, height=300)
         with container:
             self._display_button()
             self._display_qrcode()
